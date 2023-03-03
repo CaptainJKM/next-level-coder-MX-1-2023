@@ -36,8 +36,8 @@ class Game:
         self.clock.tick(FPS)
         self.screen.fill((255, 255, 255))
         self.draw_background()
-        pygame.display.update()
-        pygame.display.flip()
+        pygame.display.update() #se encarga demostrar los datos
+        pygame.display.flip() #display show
 
     def draw_background(self):
         image_width = BG.get_width()
@@ -47,3 +47,5 @@ class Game:
             self.screen.blit(BG, (image_width + self.x_pos_bg, self.y_pos_bg))
             self.x_pos_bg = 0
         self.x_pos_bg -= self.game_speed
+        
+# Tare de explicar el metodo draw_background
