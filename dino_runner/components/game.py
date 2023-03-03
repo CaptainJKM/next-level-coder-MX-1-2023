@@ -49,3 +49,9 @@ class Game:
         self.x_pos_bg -= self.game_speed
         
 # Tare de explicar el metodo draw_background
+
+# crear una clase dinosaurio en componentes - events - update - draw
+
+# herencia
+
+# sprites
