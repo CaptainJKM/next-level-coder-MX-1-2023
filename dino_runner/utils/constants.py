@@ -1,5 +1,5 @@
 import pygame
-import os
+import os #une prametros nos ayuda a cargar todo
 
 # Global Constants
 TITLE = "Chrome Dino Runner"
