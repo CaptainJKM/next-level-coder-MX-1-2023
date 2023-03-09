@@ -2,7 +2,7 @@ import random
 import pygame
 
 from dino_runner.components.power_ups.shield import Shield
-from dino_runner.utils.constants import HAMMER, SHIELD
+from dino_runner.utils.constants import POWER_UP_SOUND
 
 # Aqui se van a gestionar los poderes que apareceran en el mapa
 class PowerUpManager:
@@ -12,6 +12,7 @@ class PowerUpManager:
      self.points = 0
      self.when_appears = 0
      self.options_numbers = list(range(1, 10))
+     self.power_up_sound = POWER_UP_SOUND
         
     
     def generate_power_ups(self,points):
@@ -33,6 +34,7 @@ class PowerUpManager:
             
             if player.dino_rect.colliderect(power_up.rect):
                 player.shield = True
+                self.power_up_sound.play()
                 player.type = power_up.type
                 start_time = pygame.time.get_ticks()
                 time_random = random.randrange(5, 8)

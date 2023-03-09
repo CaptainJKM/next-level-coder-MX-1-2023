@@ -9,7 +9,8 @@ from dino_runner.utils.constants import (
     SHIELD_TYPE,
     RUNNING_SHIELD,
     DUCKING_SHIELD,
-    JUMPING_SHIELD)
+    JUMPING_SHIELD,
+    JUMP_SOUND)
 
 class Dinosaur(Sprite):
     POS_X = 80
@@ -34,7 +35,9 @@ class Dinosaur(Sprite):
         self.dino_jump = False
         self.jump_vel = self.JUMP_VEL
         self.setup_states()
-        #acuerdate mover esto
+        
+        # Codigo nuevo
+        self.jump_sound = JUMP_SOUND
         
 
     def setup_states(self):
@@ -62,6 +65,7 @@ class Dinosaur(Sprite):
             self.dino_run = False
             self.dino_duck = False
             self.dino_jump = True
+            self.jump_sound.play()
             
             # Si no toca nada entonces vuelve a correr
         elif not self.dino_jump:

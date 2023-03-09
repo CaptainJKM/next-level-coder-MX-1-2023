@@ -22,6 +22,7 @@ CRASH_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/CrashCactus.mp3'
 PUNCH_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/PunchBirdUfoSound.mp3'))
 HEART_LESS_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/HeartLessSound.mp3'))
 DEATH_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/DeathSound.mp3'))
+POWER_UP_SOUND = pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/PowerUpSound.mp3'))
 
 #Music
 START_MUSIC =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/EpicHaloSongStart.mp3'))
@@ -77,6 +78,17 @@ BIRD = [
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird2.png")),
 ]
+GRUNT = [
+    
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt3.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt4.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt5.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt6.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt7.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt8.png")),
+]
 
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
@@ -88,5 +100,6 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
+KIRBY_TYPE = "kirby"
 
 LIVES = 4
