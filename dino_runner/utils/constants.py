@@ -1,6 +1,8 @@
 import pygame
 import os #une prametros nos ayuda a cargar todo
 
+pygame.mixer.init()
+
 # Global Constants
 TITLE = "Chrome Dino Runner"
 SCREEN_HEIGHT = 600
@@ -12,6 +14,19 @@ FONT_ARIAL = pygame.font.match_font('arial')
 
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
+RESET = pygame.image.load(os.path.join(IMG_DIR, "Other/Reset.png"))
+
+# Sounds
+JUMP_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/DinoJumpSound.mp3'))
+CRASH_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/CrashCactus.mp3'))
+PUNCH_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/PunchBirdUfoSound.mp3'))
+HEART_LESS_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/HeartLessSound.mp3'))
+DEATH_SOUND =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/DeathSound.mp3'))
+
+#Music
+START_MUSIC =  pygame.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/EpicHaloSongStart.mp3'))
+
+
 
 RUNNING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
@@ -72,5 +87,6 @@ BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
+SHIELD_TYPE = "shield"
 
 LIVES = 4
