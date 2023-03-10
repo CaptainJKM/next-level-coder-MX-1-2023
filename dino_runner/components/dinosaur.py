@@ -7,9 +7,14 @@ from dino_runner.utils.constants import (
     JUMPING,
     DEFAULT_TYPE,
     SHIELD_TYPE,
+    KIRBY_TYPE,
     RUNNING_SHIELD,
     DUCKING_SHIELD,
     JUMPING_SHIELD,
+    HAMMER_TYPE,
+    RUNNING_HAMMER,
+    JUMPING_HAMMER,
+    DUCKING_HAMMER,
     JUMP_SOUND)
 
 class Dinosaur(Sprite):
@@ -19,9 +24,9 @@ class Dinosaur(Sprite):
     JUMP_VEL = 8.5
 
     def __init__(self):
-        self.run_img = { DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD}
-        self.duck_img = { DEFAULT_TYPE: DUCKING, SHIELD_TYPE: DUCKING_SHIELD}
-        self.jump_img = { DEFAULT_TYPE: JUMPING_SHIELD, SHIELD_TYPE: JUMPING_SHIELD}
+        self.run_img = { DEFAULT_TYPE: RUNNING, SHIELD_TYPE: RUNNING_SHIELD, HAMMER_TYPE: RUNNING_HAMMER, KIRBY_TYPE: RUNNING}
+        self.duck_img = { DEFAULT_TYPE: DUCKING, SHIELD_TYPE: DUCKING_SHIELD, HAMMER_TYPE: DUCKING_HAMMER, KIRBY_TYPE: DUCKING}
+        self.jump_img = { DEFAULT_TYPE: JUMPING, SHIELD_TYPE: JUMPING_SHIELD, HAMMER_TYPE: JUMPING_HAMMER, KIRBY_TYPE: JUMPING}
         self.type =  DEFAULT_TYPE        
         self.image = self.run_img[self.type][0]
         

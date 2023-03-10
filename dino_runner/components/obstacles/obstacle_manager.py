@@ -17,7 +17,7 @@ class ObstacleManager():
     def update(self, game_speed, game):
 
         if len(self.obstacles) == 0:
-            type = random.randint(0, 2)
+            type = random.randint(0, 3)
             match type:
                 case 0:
                     self.obstacles.append(Grunt(GRUNT)) 

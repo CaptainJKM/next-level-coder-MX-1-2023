@@ -7,7 +7,8 @@ from dino_runner.utils.constants import (
     SCREEN_WIDTH, 
     TITLE, 
     FPS,
-    FONT_ARIAL)
+    FONT_ARIAL,
+    START_MUSIC)
 from dino_runner.components.dinosaur import Dinosaur 
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.player_hearts.heart_manager import HeartManager
@@ -32,6 +33,10 @@ class Game:
         self.heart_manager = HeartManager()
         self.power_up_manager = PowerUpManager()
         self.points = 0
+        
+        # Musica
+        self.start_music = START_MUSIC
+        self.start_music.play(-1)
 
 
     def increase_score(self):

@@ -89,6 +89,8 @@ GRUNT = [
     pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt7.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Grunt/Grunt8.png")),
 ]
+KIRBY  = pygame.image.load(os.path.join(IMG_DIR, 'Kirby/Kirby1.png'))
+
 
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
@@ -100,6 +102,7 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
+HAMMER_TYPE = "hammer"
 KIRBY_TYPE = "kirby"
 
 LIVES = 4
